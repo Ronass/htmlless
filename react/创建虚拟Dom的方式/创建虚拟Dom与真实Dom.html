@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React基础</title>
+</head>
+<body>
+<!--准备好的容器-->
+<div id="test">
+
+</div>
+<div id="demo">
+
+</div>
+</body>
+<!--引入babel，用于将jsx转为js-->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<!--核心库引入顺序，必须先是核心库然后在引入dom库-->
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<!--用于支持react操作dom-->
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<!--此处的type必须是Babel不能是JavaScript-->
+<script type="text/babel">
+    /*1.创建虚拟DOM*/
+    const dom = ( /*此处一定不要写引号，因为不是字符串*/
+        <h1 id="title">
+            <span>Hello,React</span>
+        </h1>
+    )
+    /*2.渲染虚拟dom到页面*/
+    ReactDOM.render(dom, document.getElementById('test'))
+    console.log('虚拟Dom', dom)
+
+    const trueDom = document.getElementById("demo")
+    console.log(trueDom)
+
+    console.log(typeof dom)
+    console.log(dom instanceof Object)
+
+    /*
+    * 关于虚拟Dom
+    * 1。本质是Object类型的对象（一般对象）
+    * */
+
+</script>
+</html>
