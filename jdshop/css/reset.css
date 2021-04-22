@@ -1,0 +1,13 @@
+html, body, ul, li, ol {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+dl, dd, dt {
+    margin: 0;
+    padding: 0;
+}
